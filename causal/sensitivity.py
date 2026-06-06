@@ -59,7 +59,7 @@ def rosenbaum_bounds(
             "matched pairs (e.g. from PropensityScoreMatching.match())."
         )
     if gamma_range is None:
-        gamma_range = [round(g, 2) for g in np.arange(1.0, 3.01, 0.1)]
+        gamma_range = [float(round(g, 2)) for g in np.arange(1.0, 3.01, 0.1)]
 
     # Difference in outcome within each matched pair (treated minus control).
     diffs = []
